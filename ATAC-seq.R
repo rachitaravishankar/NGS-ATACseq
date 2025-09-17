@@ -1,5 +1,5 @@
 #### Set Working Directory ####
-setwd("/Users/rachitaravishankar/Desktop/RACHITA/ATAC-seq")
+setwd("./ATAC-seq")
 
 #### QC ####
 # Work w/ aligned reads directly
@@ -22,11 +22,11 @@ library(soGGi) #visualization package for ATAC-seq
 # BAM.bai - table of contents to navigate bam 
 
 ##### Set up Parse #####
-OMNI_bam_path <- "/Users/rachitaravishankar/Desktop/RACHITA/ATAC-seq/BAM_files/OMNI.bam"
-OMNI_bai_path <- "/Users/rachitaravishankar/Desktop/RACHITA/ATAC-seq/BAM_files/OMNI.bam.bai"
+OMNI_bam_path <- "./BAM_files/OMNI.bam"
+OMNI_bai_path <- "./BAM_files/OMNI.bam.bai"
 
-STD_bam_path <- "/Users/rachitaravishankar/Desktop/RACHITA/ATAC-seq/BAM_files/STD.bam"
-STD_bai_path <- "/Users/rachitaravishankar/Desktop/RACHITA/ATAC-seq/BAM_files/STD.bam.bai"
+STD_bam_path <- "./BAM_files/STD.bam"
+STD_bai_path <- "./BAM_files/STD.bam.bai"
 
 ###### Inspect OMNI BAM files #####
   # Sub-setting Data 
@@ -97,8 +97,8 @@ dir.create(output_path, recursive = TRUE)
 # bed files - annotated and non-annotated
 # each peak = 'Interval'
 
-peaks_bed_path <- "/Users/rachitaravishankar/Desktop/RACHITA/ATAC-seq/Peak_files/consensus_peaks_annotated.bed"
-peaks_bed <- as.data.frame(read.delim2("~/Desktop/RACHITA/ATAC-seq/Peak_files/consensus_peaks_annotated.bed"))
+peaks_bed_path <- "./Peak_files/consensus_peaks_annotated.bed"
+peaks_bed <- as.data.frame(read.delim2("~/Peak_files/consensus_peaks_annotated.bed"))
 
 # manipulate df to find how many peaks in data
 # each row = peak = 104659
